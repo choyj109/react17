@@ -1,13 +1,12 @@
-import React from 'react';
-import './index.css';
+import React from "react";
+import "./index.css";
+import VideoItem from "../VideoItem/index";
 const VideoList = () => {
-   
-    
-    return (
-        <ul className='videoList VideoGrid'>
-           
-        </ul>
-    );
+  return (
+    <ul className="videoList VideoGrid">
+      <VideoItem />
+    </ul>
+  );
 };
 
 export default VideoList;

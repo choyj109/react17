@@ -1,36 +1,36 @@
-html{
+html {
   font-size: 20px;
 }
-:root{
-  --color-black:#000;
+:root {
+  --color-black: #000;
   --color-dark-gray: #202020;
-  --color-gray:#303030;
-  --color-middle-gray:#606060;
-  --color-light-gray:#c0c0c0;
-  --color-blue:#0072ec;
-  --color-light-blue:#adcef2;
-  --color-red:#cc0001;
-  --color-white:#fff;
+  --color-gray: #303030;
+  --color-middle-gray: #606060;
+  --color-light-gray: #c0c0c0;
+  --color-blue: #0072ec;
+  --color-light-blue: #adcef2;
+  --color-red: #cc0001;
+  --color-white: #fff;
 }
-*{
-  font-family: 'Noto Sans KR', sans-serif;
+* {
+  font-family: "Noto Sans KR", sans-serif;
   margin: 0;
   box-sizing: border-box;
 }
-a{
+a {
   text-decoration: none;
-  color:inherit;
+  color: inherit;
 }
-button{
-  border:none;
+button {
+  border: none;
   outline: none;
   cursor: pointer;
   background-color: transparent;
 }
-body{
+body {
   background: var(--color-black);
 }
-.main-content{
+.main-content {
   margin-left: 4rem;
-  margin-top: 2.7rem;
+  margin-top: 4.5rem;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { useDispatch } from "react-redux";
 import { getVideoList } from "../../../store/video/videoSlice";
 

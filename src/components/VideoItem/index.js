@@ -1,9 +1,22 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./index.css";
 
-const VideoItem = ({ item }) => {
+const VideoItem = ({ item, value }) => {
+  let id;
+  if (typeof value.id === "string") {
+    id = value.id;
+  } else if (typeof value.id === "object") {
+    id = value.id.videoId;
+  }
+  /* item items.snippet
+  value items */
+  const navigate = useNavigate();
+  const goToWatch = () => {
+    navigate(`/watch?id=${id}`);
+  };
   return (
-    <li className="videoItem videoItemGrid">
+    <li className="videoItem videoItemGrid" onClick={goToWatch}>
       <img
         src={item.thumbnails.medium.url}
         alt="썸네일"

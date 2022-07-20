@@ -19,6 +19,7 @@ const VideoList = () => {
           <VideoItem
             key={item.snippet.thumbnails.default.url}
             item={item.snippet}
+            value={item}
           />
         );
       })}

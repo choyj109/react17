@@ -7,8 +7,8 @@ import Watch from "./pages/Watch";
 function App() {
   return (
     <div className="App">
-      <Header />
       <BrowserRouter>
+        <Header />
         <section>
           <Routes>
             <Route path="/" element={<Home />} />

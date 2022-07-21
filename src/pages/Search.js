@@ -1,16 +1,10 @@
 import React from "react";
 import SideMenu from "../components/SideMenu/index";
 import VideoList from "../components/VideoList/index";
-import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { videoListLayout } from "../store/video/videoSlice";
+import { useSelector } from "react-redux";
 
-const Home = () => {
-  const dispatch = useDispatch();
+const Search = () => {
   const display = useSelector((state) => state.video.listLayout);
-  useEffect(() => {
-    dispatch(videoListLayout("grid"));
-  }, []);
   return (
     <>
       <SideMenu />
@@ -21,4 +15,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Search;

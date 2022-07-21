@@ -7,3 +7,6 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+.videoRowList {
+  flex-wrap: wrap;
+}

@@ -4,16 +4,20 @@ import VideoItem from "../VideoItem/index";
 import { useDispatch, useSelector } from "react-redux";
 import { getVideoList } from "../../store/video/videoSlice";
 import { useEffect } from "react";
+import { videoUrl } from "../../lib/api";
 
-const VideoList = () => {
+const VideoList = ({ display }) => {
   const dispatch = useDispatch();
   const videoData = useSelector((state) => state.video.data);
   useEffect(() => {
-    const url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=30&regionCode=kr&key=AIzaSyAhFLFwT3drY584SzxWQj9mIqworRr5Cl0`;
-    dispatch(getVideoList(url));
+    dispatch(getVideoList(videoUrl));
   }, [dispatch]);
   return (
-    <ul className="videoList videoGrid">
+    <ul
+      className={
+        display === "grid" ? "videoList videoGrid" : "videoList videoRowList"
+      }
+    >
       {videoData.map((item, idx) => {
         return (
           <VideoItem

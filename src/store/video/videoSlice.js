@@ -14,8 +14,13 @@ const videoSlice = createSlice({
   name: "video",
   initialState: {
     data: [],
+    listLayout: "grid",
   },
-  reducers: {},
+  reducers: {
+    videoListLayout: (state, action) => {
+      state.listLayout = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(getVideoList.fulfilled, (state, action) => {
       console.log("액션페이로드", action.payload);
@@ -24,4 +29,5 @@ const videoSlice = createSlice({
   },
 });
 
+export const { videoListLayout } = videoSlice.actions;
 export default videoSlice.reducer;

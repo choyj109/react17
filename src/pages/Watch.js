@@ -10,7 +10,7 @@ const Watch = () => {
   const videoData = useSelector((state) => state.video.data);
   const lt10VideoData = videoData.filter((item, idx) => idx < 10);
   return (
-    <section>
+    <section className="list content">
       <VideoView id={id} />
       <ul className="watchList">
         {lt10VideoData.map((item, idx) => (

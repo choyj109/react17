@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./index.css";
+import { converDate } from "./../../lib/common";
 
 const VideoItem = ({ item, value }) => {
   let id;
@@ -26,6 +27,7 @@ const VideoItem = ({ item, value }) => {
         <div className="description">
           <h2 className="videoTitle">{item.title}</h2>
           <h3 className="channelTitle">{item.channelTitle}</h3>
+          <p className="date">{converDate(item.publishedAt)}</p>
         </div>
       </div>
     </li>

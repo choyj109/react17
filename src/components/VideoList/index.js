@@ -2,8 +2,8 @@ import React from "react";
 import "./index.css";
 import VideoItem from "../VideoItem/index";
 import { useDispatch, useSelector } from "react-redux";
-import { getVideoList } from "../../store/video/videoSlice";
 import { useEffect, useState } from "react";
+import { getVideoList } from "../../store/video/videoSlice";
 import { videoUrl } from "../../lib/api";
 import { MoonLoader } from "react-spinners";
 
@@ -17,15 +17,15 @@ const VideoList = ({ display }) => {
   if (loading) {
     return (
       <MoonLoader
-        color="#8e4d4d"
+        color="#f00"
+        loading={loading}
+        size={150}
         cssOverride={{
           position: "absolute",
           top: "50%",
           left: "50%",
           transform: `translate(-50%,-50%)`,
         }}
-        loading={loading}
-        size={150}
         speedMultiplier={0.5}
       />
     );
@@ -36,15 +36,13 @@ const VideoList = ({ display }) => {
         display === "grid" ? "videoList videoGrid" : "videoList videoRowList"
       }
     >
-      {data.map((item, idx) => {
-        return (
-          <VideoItem
-            key={item.snippet.thumbnails.default.url}
-            item={item.snippet}
-            value={item}
-          />
-        );
-      })}
+      {data.map((item, idx) => (
+        <VideoItem
+          key={item.snippet.thumbnails.default.url}
+          item={item.snippet}
+          value={item}
+        />
+      ))}
     </ul>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import "./index.css";
-import { converDate } from "./../../lib/common";
+import { useNavigate } from "react-router-dom";
+import { convertDate } from "./../../lib/common";
 
 const VideoItem = ({ item, value }) => {
   let id;
@@ -14,20 +14,22 @@ const VideoItem = ({ item, value }) => {
   value items */
   const navigate = useNavigate();
   const goToWatch = () => {
-    navigate(`/watch?id=${id}`);
+    navigate(`/watch?id=${id}&channelId=${item.channelId}`);
   };
   return (
     <li className="videoItem videoItemGrid" onClick={goToWatch}>
-      <img
-        src={item.thumbnails.medium.url}
-        alt="썸네일"
-        className="thumbnail-img"
-      />
+      <div className="thumbnail-img-box">
+        <img
+          src={item.thumbnails.medium.url}
+          alt="비디오썸네일"
+          className="thumbnail-img"
+        />
+      </div>
       <div className="descriptionBox">
         <div className="description">
           <h2 className="videoTitle">{item.title}</h2>
           <h3 className="channelTitle">{item.channelTitle}</h3>
-          <p className="date">{converDate(item.publishedAt)}</p>
+          <p className="date">{convertDate(item.publishedAt)}</p>
         </div>
       </div>
     </li>

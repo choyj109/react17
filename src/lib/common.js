@@ -1,7 +1,7 @@
-export function converDate(dateValue) {
+export function convertDate(dateValue) {
   const publishedDate = new Date(dateValue);
   const currentDate = new Date();
-  const seconds = currentDate.getTime() - publishedDate.getTime();
+  const seconds = (currentDate.getTime() - publishedDate.getTime()) / 1000;
   let result;
   if (seconds < 10) {
     result = `방금 전`;

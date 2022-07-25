@@ -1,6 +1,6 @@
 import React from "react";
-import SideMenu from "../components/SideMenu/index";
 import VideoList from "../components/VideoList/index";
+import SideMenu from "../components/SideMenu/index";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { videoListLayout } from "../store/video/videoSlice";

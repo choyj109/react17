@@ -14,10 +14,9 @@
   display: flex;
   align-items: center;
   color: #fff;
-  margin-right: 2.2rem;
 }
 .menuBtn {
-  margin: 1rem 1.25rem;
+  margin: 1rem 1.3rem;
   background-color: var(--color-dark-gray);
 }
 .menuBtn i {
@@ -25,30 +24,26 @@
   font-size: 1rem;
 }
 .logo {
+  margin: 0 1rem;
   display: flex;
   align-items: center;
   color: #fff;
-  margin-left: 1.1rem;
-  margin-right: -2.5rem;
 }
 .logoImage {
-  width: 1.9rem;
+  width: 1.2rem;
   margin-right: 0.2rem;
 }
 .logoTitle {
-  width: 0.1rem;
+  font-size: 1rem;
   font-family: "Bebas Neue", cursive;
-  font-size: 1.5rem;
-  margin-left: 0.2rem;
 }
 .header-center {
   display: flex;
-  width: 65%;
-  margin-left: 3rem;
+  width: 70%;
 }
 .header-end {
   display: flex;
-  margin: 0 1rem;
+  width: 0 1rem;
 }
 .top-util-btn {
   padding: 0.5rem;

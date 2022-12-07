@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 import VideoItem from "../VideoItem/index";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { getVideoList } from "../../store/video/videoSlice";
 import { videoUrl } from "../../lib/api";
 import { MoonLoader } from "react-spinners";

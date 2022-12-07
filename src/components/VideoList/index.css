@@ -10,3 +10,9 @@
 .videoRowList {
   flex-wrap: wrap;
 }
+@media screen and (max-width: 1117px) {
+  .content {
+    display: block;
+  }
+}
+

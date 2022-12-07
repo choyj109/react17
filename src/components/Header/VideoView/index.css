@@ -51,11 +51,8 @@ iframe {
   color: var(--color-light-gray);
 }
 
-.list.content .watchList.videoRowList .videoItem.videoItemGrid {
-  width: 100%;
-}
 .list.content .watchList.videoRowList .videoItem.videoItemGrid .descriptionBox {
-  width: 200px;
+  width: 215px;
 }
 .list.content
   .watchList.videoRowList
